@@ -1,18 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Description>dotnet-ws is a dotnet tool for WebSharper</Description>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>dotnet_ws</RootNamespace>
     <WarnOn>3390;$(WarnOn)</WarnOn>
     <PackAsTool>true</PackAsTool>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageTags>WebSharper ws tool</PackageTags>
+    <PackageType>DotnetTool, 0.1.0.0</PackageType>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Version>0.1.0</Version>
+    <Authors>IntelliFactory</Authors>
     <ToolCommandName>dotnet-ws</ToolCommandName>
-	<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+    <IsTool>true</IsTool>
+    <RepositoryUrl>https://github.com/dotnet-websharper/dotnet-ws</RepositoryUrl>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include=".config\dotnet-tools.json" />
     <None Include=".gitignore" />
-    <None Include="LICENSE.md" />
+    <None Include="LICENSE.md" Pack="true" PackagePath="" />
     <None Include="README.md" />
     <Compile Include="Program.fs" />
   </ItemGroup>
